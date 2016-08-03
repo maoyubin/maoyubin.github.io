@@ -89,8 +89,8 @@ grid_3-1:nth-of-type(3n+1),
 /********** Header Styles ***********/
 
 #header-wrap{
-	background: #6AB47B;
-	border-top: 5px solid #4C8158;
+	background: rgba(2, 117, 216,0.7);
+	border-top: 5px solid rgb(2, 117, 216);
 }
 
 /********** Navigation Styles **********/
@@ -298,9 +298,8 @@ grid_3-1:nth-of-type(3n+1),
 }
 
 /********** Footer Styles **********/
-
 #footer-wrap {
-	background: #DAF5E0;
+	background: rgba(2, 117, 216,0.2);
 	text-align: center;
 	padding: 20px 0 20px;  
 }
