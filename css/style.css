@@ -226,12 +226,12 @@ grid_3-1:nth-of-type(3n+1),
 }
 
 #quote {
-	background: rgba(47, 52, 48, .8);
+	background: rgba(47, 52, 48, .5);
 	font-size: 1.6em;
 	text-align: center;
 	color: #fff;
 	line-height: 1.618em;
-	padding: 30px;
+	padding: 30px
 	font-family: 'Droid Serif', Serif;
 }
 
