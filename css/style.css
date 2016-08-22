@@ -61,37 +61,27 @@ p {
 	margin: 1em 0 1em;
 }
 
+a {
+	font-size: 1.2em;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+
+li {
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
+}
+
 .row{
-	width: 96%;
-	max-width: 960px;
-	margin: 0 auto;
+	margin: 0 6%;
 } 
 
-.grid_2-1 {
-	width: 50%;
-	padding: 0 5% 0 0%;
-	float: left;
-}
 
-.grid_2-1 + .grid_2-1 {
-	padding: 0;
-}
-.grid_3-1 {
-	width: 31.2%;
-	float: left;
-	margin-left: 3.2%;
-	margin-right: 0;
-}
-
-grid_3-1:nth-of-type(3n+1),
-.grid_3-1:nth-of-type(1) {
-	margin-left: 0;
-}
 /********** Header Styles ***********/
 
 #header-wrap{
 	background: rgba(2, 117, 216,0.7);
-	border-top: 5px solid rgb(2, 117, 216);
 	position: fixed;
 	width: 100%;
 	padding: 20px;
@@ -107,16 +97,14 @@ grid_3-1:nth-of-type(3n+1),
 
 /********** Navigation Styles **********/
 
-#main-nav {
+#main-nav > ul{
     float: right;
-    display: inline-block;
-    position: relative;
+    width: 85%;
 }
 
-#main-nav li {
-	float:left;
-	text-decoration: none;
-	list-style: none;
+#main-nav > ul > li {
+	float:right;
+	width: 150px;
 	display: inline-block;
 	-webkit-transition: all .5s linear;
     -moz-transition: all .5s linear;
@@ -128,50 +116,48 @@ grid_3-1:nth-of-type(3n+1),
     background: #DAF5E0;
 }
 
-#main-nav li:hover .sub-nav {
+#main-nav li:hover .sub-nav > li {
 	    display: block;
 }
 
-#main-nav li a {
-	text-decoration: none;
+#main-nav > ul > li > a {
 	color: #fff;
-	padding: 15px 20px;
     display: inline-block;
 }
 
 .sub-nav{
-	display: none;
-	position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    top: 100%;
+  position: absolute;
+  width: 150px;
 }
 
-.sub-nav li a {
-	min-width: 160px;
-    padding: 15px 20px;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    float: none;
-    color: #000;
+.sub-nav > li {
+  display: none;
+  padding: 10px 15px;
+  background: rgba(218, 217, 244,.7);
+  color: rgba(255,255,255,.7);
 }
 
-.sub-nav li a:hover {
-	border-left: 5px solid #6AB47B;
-	border-right: 5px solid #6AB47B;
-	-webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
+#main-nav > ul > li:hover > ul.menu-1 li {
+  opacity: 0;
+  animation: menu1 300ms ease-in-out forwards;
+}
+
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px);
+  }
 }
 
 #main-nav ul.sub-nav li:hover {
 	background: #fff;
 }
 
-#main-nav ul li:hover a{
+#main-nav > ul > li:hover a{
 		color: #333;
 }
 
@@ -189,11 +175,13 @@ grid_3-1:nth-of-type(3n+1),
     font-weight: 300;
 } 
 #site-title {
-	font-size: 2em;
+	font-size: 2.5em;
 	color: #fff;
+	line-height: 20%;
+	vertical-align: center;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
-	display: inline-block;
+	float: left;
 	padding: 5px;
 }
 
@@ -233,7 +221,7 @@ grid_3-1:nth-of-type(3n+1),
 #developer h2{
 	font-family: Lato, sans-serif;
 	font-size: 2.2em;
-    color: #DAF5E0;
+    color: #fff;
     margin-bottom: 30px;
 }
 
@@ -243,70 +231,10 @@ grid_3-1:nth-of-type(3n+1),
 	text-align: center;
 	color: #fff;
 	line-height: 1.618em;
-	padding: 30px
+	margin: 0 auto;
+	padding: 20px;
+	width:50%;
 	font-family: 'Droid Serif', Serif;
-}
-
-/********** Component Style **********/
-
-.module{
-	background: #fff;
-	border: 1px solid #DAF5E0;
-	padding: 12% 0 12%;
-	margin: 0 0 30px;
-	text-align: center;
-	border-radius: 5px;
-	position: relative;
-	box-shadow: 2px 2px 22px #e8e8e8;
-	-webkit-transition: all 3s linear;
-	-moz-transition: all 3s linear;
-	-ms-transition: all 3s linear;
-	-o-transition: all 3s linear;
-	transition: all 3s linear;
-}
-
-.module h2 {
-	color: #4C8158;
-	font-size: 1.6em;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.module-view{    
-	display: block;
-	position: absolute;
-	opacity: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(76, 129, 88, .7);
-    color: #fff;
-    font-size: 2em;
-    border-radius: 4px;
-    border-bottom: 5px solid #4C8158;
-    box-shadow: 2px 2px 22px #DAF5E0;
-    -webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
-}
-
-.module:hover h2{
-	color: transparent;
-}
-
-.module:hover .module-view {
-	opacity: 1;
-}
-
-.module-view a {
-	display: block;
-	padding: 20% 0 0;
-	height: 100%;
-	text-decoration: none;
-	color: #fff;
 }
 
 /********** Footer Styles **********/
