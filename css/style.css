@@ -74,7 +74,7 @@ li {
 }
 
 .row{
-	margin: 0 6%;
+	margin: 0 3%;
 } 
 
 
@@ -97,15 +97,32 @@ li {
 
 /********** Navigation Styles **********/
 
-#main-nav > ul{
-    float: right;
-    width: 85%;
+#main-nav > ul.tool-ul{
+    float: left;
+    width: 70%;
 }
 
-#main-nav > ul > li {
-	float:right;
+#main-nav > ul.icon{
+    float: right;
+    width: 15%;
+}
+
+#main-nav > ul.tool-ul > li {
+	float:left;
 	width: 150px;
 	display: inline-block;
+	border-radius: 5px;
+	-webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+#main-nav > ul.icon > li {
+	float:left;
+	width: 50px;
+	display: inline-block;
+	border-radius: 100%;
 	-webkit-transition: all .5s linear;
     -moz-transition: all .5s linear;
     -o-transition: all .5s linear;
