@@ -109,7 +109,7 @@ li {
 
 #main-nav > ul.tool-ul > li {
 	float:left;
-	width: 150px;
+	width: 140px;
 	display: inline-block;
 	border-radius: 5px;
 	-webkit-transition: all .5s linear;
