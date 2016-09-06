@@ -99,12 +99,12 @@ li {
 
 #main-nav > ul.tool-ul{
     float: left;
-    width: 70%;
+    width: 75%;
 }
 
 #main-nav > ul.icon{
     float: right;
-    width: 15%;
+    width: 13%;
 }
 
 #main-nav > ul.tool-ul > li {
@@ -191,12 +191,12 @@ li {
 	font-family: Raleway;
     font-weight: 300;
 } 
-#site-title {
+#site_title {
 	font-size: 2.5em;
 	color: #fff;
 	line-height: 20%;
 	vertical-align: center;
-	text-align: center;
+	text-align: right;
 	font-family: 'Lato', sans-serif;
 	float: left;
 	padding: 5px;
